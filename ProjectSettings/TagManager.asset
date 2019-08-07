@@ -6,7 +6,6 @@ TagManager:
   tags:
   - Projectile
   - Mob
-  - Limit
   layers:
   - Default
   - TransparentFX

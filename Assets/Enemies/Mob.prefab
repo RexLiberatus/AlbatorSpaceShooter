@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 7105815306494157507}
   m_Layer: 10
   m_Name: Mob
-  m_TagString: Mob
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -94,7 +94,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4658bc222704ea43bd7396f458b44da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 125
+  speed: 250
 --- !u!50 &-7082565214090041547
 Rigidbody2D:
   serializedVersion: 4
