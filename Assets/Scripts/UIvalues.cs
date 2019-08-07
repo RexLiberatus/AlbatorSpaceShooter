@@ -9,7 +9,7 @@ public class UIvalues :MonoBehaviour
 {
     #region Data
 
-    static int lives=3;
+    static int lives=4;
   
     static int score=0;
   
