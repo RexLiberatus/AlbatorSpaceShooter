@@ -15,8 +15,9 @@ public class AmmoBehaviour : MonoBehaviour
         Reset();
         if(collision.gameObject.tag=="Mob")
         {
-            //increase score here
-            //then
+            UIvalues.Score += UIvalues.KillPoints;
+            if(UIvalues.Score%250==0)
+            { UIvalues.Lives += 1; }
             Destroy(collision.gameObject);
         }
     }
