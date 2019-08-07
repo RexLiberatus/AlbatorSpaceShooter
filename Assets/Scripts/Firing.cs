@@ -56,16 +56,15 @@ public class Firing : MonoBehaviour
         GameObject ammo = GiveMeTheNextAvailableAmmo();
        ApplyDownOrUpForce(trigger, ammo);
 
-
-        //Debug.Log("i1");
-        //ammoReserve[i].SetActive(true);
-
     }
     private void ApplyDownOrUpForce(bool isDown, GameObject ammo)
     {
+        if (ammo != null)
         ammo.transform.position = gameObject.transform.position;
         ammo.SetActive(true);
         Debug.Log("Ammo => ", ammo);
+        if (isDown)
+            ammo.transform.rotation = new Quaternion(0, 0, 180f, 0);
         ammo.GetComponent<Rigidbody2D>().AddForce( isDown ? Vector2.down: Vector2.up * speed, ForceMode2D.Impulse);
     }
 

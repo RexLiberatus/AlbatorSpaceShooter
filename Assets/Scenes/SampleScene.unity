@@ -131,6 +131,7 @@ GameObject:
   - component: {fileID: 519420032}
   - component: {fileID: 519420031}
   - component: {fileID: 519420029}
+  - component: {fileID: 519420030}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -146,6 +147,20 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 519420028}
   m_Enabled: 1
+--- !u!114 &519420030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 519420028}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 116ec0051bfc5524cadcb48875a3d420, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  prefabMob: {fileID: 4411845707248284655, guid: 0bc96318edd08124bb7cc54558488e7b,
+    type: 3}
 --- !u!20 &519420031
 Camera:
   m_ObjectHideFlags: 0
@@ -244,6 +259,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 4576212311494001034, guid: bbbb8c18080b9fe4dac1a4182c25f773,
+        type: 3}
+      propertyPath: m_Name
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576212311494001034, guid: bbbb8c18080b9fe4dac1a4182c25f773,
+        type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 4576212311494001034, guid: bbbb8c18080b9fe4dac1a4182c25f773,
+        type: 3}
+      propertyPath: m_Layer
+      value: 8
+      objectReference: {fileID: 0}
     - target: {fileID: -808813436004575658, guid: bbbb8c18080b9fe4dac1a4182c25f773,
         type: 3}
       propertyPath: onFire.m_PersistentCalls.m_Calls.Array.size
@@ -283,21 +313,6 @@ PrefabInstance:
         type: 3}
       propertyPath: onFire.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Shoot
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576212311494001034, guid: bbbb8c18080b9fe4dac1a4182c25f773,
-        type: 3}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576212311494001034, guid: bbbb8c18080b9fe4dac1a4182c25f773,
-        type: 3}
-      propertyPath: m_TagString
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 4576212311494001034, guid: bbbb8c18080b9fe4dac1a4182c25f773,
-        type: 3}
-      propertyPath: m_Layer
-      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4576212311494001029, guid: bbbb8c18080b9fe4dac1a4182c25f773,
         type: 3}
