@@ -4,36 +4,15 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    #region Data
-    bool GodMode=false;
-    #endregion
-    #region  Accessors
-    #endregion
-    #region Methods
-    private void OnCollisionEnter2D(Collision2D collision)
+    // Start is called before the first frame update
+    void Start()
     {
-        if(collision.gameObject.tag=="Mob")
-        {
-            Destroy(collision.gameObject);
-            if (!GodMode)
-            {
-                UIvalues.Lives -= 1;
-                GodMode = true;
-                if (UIvalues.Lives <= 0)
-                {
-                    //game over screen call here
-                }
-                else
-                {
-                    StartCoroutine(DisableDamageFor4sec());
-                }
-            }
-        }
-        IEnumerator DisableDamageFor4sec()
-        {
-            yield return new WaitForSeconds(4f);
-            GodMode = false;
-        }
+        
     }
-    #endregion
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
 }

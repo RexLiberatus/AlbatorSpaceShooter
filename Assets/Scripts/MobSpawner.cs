@@ -40,10 +40,11 @@ public class MobSpawner : MonoBehaviour
             Yvalue = 0;
         }
 
-        Vector2 position = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0f, 2f), Yvalue, 0));
+        Vector2 position = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(1f, 2f), Yvalue, 0));
 
             spawn = Instantiate(prefabMob,position, Quaternion.identity);
-
+            
+       
     }
     #endregion
 }
