@@ -15,9 +15,11 @@ GameObject:
   - component: {fileID: 4576212311494001033}
   - component: {fileID: -1760920936031087173}
   - component: {fileID: -808813436004575658}
-  m_Layer: 0
+  - component: {fileID: 1025269396876291471}
+  - component: {fileID: 2537671211492414924}
+  m_Layer: 8
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,6 +163,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   prefabAmmo: {fileID: 0}
   speed: 0
+  ammoReserve: []
 --- !u!114 &-808813436004575658
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -189,3 +192,27 @@ MonoBehaviour:
         m_CallState: 2
     m_TypeName: UnityEngine.Events.UnityEvent, UnityEngine.CoreModule, Version=0.0.0.0,
       Culture=neutral, PublicKeyToken=null
+--- !u!114 &1025269396876291471
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4576212311494001034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fc98bd8982718ee4ea4b17222d102175, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &2537671211492414924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4576212311494001034}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 73d4ef2d4328f2c48b74dc5897887e4d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
