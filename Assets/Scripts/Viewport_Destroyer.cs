@@ -6,16 +6,16 @@ using UnityEngine;
 public class Viewport_Destroyer : MonoBehaviour
 {
 
-    public Transform m_target;
+    Transform m_target;
     public Vector2 m_viewport;
 
 
     void Update()
     {
-        CheckDisablehPosition();
+        CheckDisablePosition();
     }
 
-    private void CheckDisablehPosition()
+    private void CheckDisablePosition()
     {
   
         m_target = transform;

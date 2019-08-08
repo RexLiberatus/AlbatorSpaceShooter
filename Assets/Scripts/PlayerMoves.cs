@@ -18,19 +18,19 @@ public class PlayerMoves : MonoBehaviour
     void FixedUpdate()
     {
         
-        if(Input.GetKey(KeyCode.Z))
+        if(Input.GetKeyDown(KeyCode.Z))
         {
             MoveVert(Vector3.up);
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKeyDown(KeyCode.S))
         {
             MoveVert(Vector3.down);
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetKeyDown(KeyCode.D))
         {
             MoveHor(Vector3.right);
         }
-       if (Input.GetKey(KeyCode.Q))
+       if (Input.GetKeyDown(KeyCode.Q))
        {
         MoveHor(Vector3.left);
         }

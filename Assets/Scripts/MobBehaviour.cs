@@ -30,9 +30,15 @@ public class MobBehaviour : MonoBehaviour
     }
     private void Update()
     {
-        if (Camera.main.WorldToViewportPoint(transform.position).y >=2) 
-        rb.velocity = -rb.velocity;
-        if (Camera.main.WorldToViewportPoint(transform.position).y <= -1)
+        if (Camera.main.WorldToViewportPoint(transform.position).y >= 2)
+        {
             rb.velocity = -rb.velocity;
+            transform.rotation = Quaternion.Inverse(transform.rotation);
+        }
+        if (Camera.main.WorldToViewportPoint(transform.position).y <= -1)
+        {
+            rb.velocity = -rb.velocity;
+            transform.rotation = Quaternion.Inverse(transform.rotation);
+        }
     }
 }

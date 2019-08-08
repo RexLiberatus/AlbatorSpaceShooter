@@ -12,11 +12,10 @@ public class AmmoBehaviour : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("aïe");
-        Reset();
+        ResetBullet();
         if(collision.gameObject.tag=="Mob")
         {
-            //increase score here
-            //then
+            UIvalues.Score += 25;
             Destroy(collision.gameObject);
         }
     }
@@ -25,9 +24,9 @@ public class AmmoBehaviour : MonoBehaviour
         Debug.Log(Time.time);
         yield return new WaitForSeconds(3f);
         Debug.Log(Time.time);
-        Reset();
+        ResetBullet();
     }
-    private void Reset()
+    private void ResetBullet()
     {
         gameObject.SetActive(false);
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;

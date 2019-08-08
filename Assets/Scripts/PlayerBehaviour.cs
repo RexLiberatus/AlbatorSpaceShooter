@@ -1,18 +1,30 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    bool godmode;
+    public int godModeDelay;
+
+    private void Start()
     {
-        
+        godmode = false;
+    }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.tag == "Mob")
+        {
+            UIvalues.Lives -= 1;
+            godmode = true;
+            StartCoroutine(UnableGodMode(godModeDelay));
+            godmode = false;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    IEnumerator UnableGodMode(int delay)
     {
-        
+        yield return new WaitForSeconds(delay);
     }
 }
