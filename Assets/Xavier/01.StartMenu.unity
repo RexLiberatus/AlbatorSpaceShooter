@@ -281,6 +281,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: StartMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 3205263625099242406, guid: 5527260d27bd60343a73e5e529c1cdac,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3205263625099242402, guid: 5527260d27bd60343a73e5e529c1cdac,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -395,6 +400,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_sharedMaterial
       value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 3205263624870351868, guid: 5527260d27bd60343a73e5e529c1cdac,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5527260d27bd60343a73e5e529c1cdac, type: 3}
