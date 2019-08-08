@@ -21,24 +21,25 @@ public class MobBehaviour : MonoBehaviour
         var camPosition = Camera.main.transform.position;
         if( camPosition.y >= transform.position.y)
         {
-            rb.AddRelativeForce(Vector2.up * speed, ForceMode2D.Impulse);
+            rb.velocity=Vector2.up * speed;
         }
         else
         {
-            rb.AddRelativeForce(Vector2.down * speed, ForceMode2D.Impulse);
+            transform.rotation = new Quaternion(0, 0, transform.rotation.z + 180f, 0);
+            rb.velocity = Vector2.down * speed;
         }
     }
     private void Update()
     {
         if (Camera.main.WorldToViewportPoint(transform.position).y >= 2)
         {
+            transform.rotation = new Quaternion(0, 0, transform.rotation.z + 180f,0);
             rb.velocity = -rb.velocity;
-            transform.rotation = Quaternion.Inverse(transform.rotation);
         }
         if (Camera.main.WorldToViewportPoint(transform.position).y <= -1)
         {
+            transform.rotation = new Quaternion(0, 0, transform.rotation.z + 180f, 0);
             rb.velocity = -rb.velocity;
-            transform.rotation = Quaternion.Inverse(transform.rotation);
         }
     }
 }

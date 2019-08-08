@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class PlayerBehaviour : MonoBehaviour
 {
-    bool godmode;
+   private bool godmode;
     public int godModeDelay;
 
     private void Start()
@@ -18,13 +18,15 @@ public class PlayerBehaviour : MonoBehaviour
         {
             UIvalues.Lives -= 1;
             godmode = true;
+            Destroy(collision.gameObject);
             StartCoroutine(UnableGodMode(godModeDelay));
-            godmode = false;
+           
         }
     }
 
     IEnumerator UnableGodMode(int delay)
     {
         yield return new WaitForSeconds(delay);
+        godmode = false;
     }
 }

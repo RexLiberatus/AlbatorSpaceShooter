@@ -96,7 +96,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a4658bc222704ea43bd7396f458b44da, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 50
+  speed: 5
 --- !u!50 &-7082565214090041547
 Rigidbody2D:
   serializedVersion: 4
@@ -229,9 +229,7 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2.000001
       objectReference: {fileID: 0}
-    m_RemovedComponents:
-    - {fileID: 228599570748483244, guid: 2680d8c0a285e6043b2403c57443bec5, type: 3}
-    - {fileID: 8608428830338637858, guid: 2680d8c0a285e6043b2403c57443bec5, type: 3}
+    m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2680d8c0a285e6043b2403c57443bec5, type: 3}
 --- !u!4 &7323319213262430813 stripped
 Transform:

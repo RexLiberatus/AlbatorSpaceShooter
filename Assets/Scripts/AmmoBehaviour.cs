@@ -4,11 +4,22 @@ using UnityEngine;
 
 public class AmmoBehaviour : MonoBehaviour
 {
+    bool fired;
+    public bool Fired { get => fired; set => fired = value; }
+
     private void Start()
     {
         StartCoroutine(Delay5sec());
+        bool fired = false;
     }
-    
+    private void FixedUpdate()
+    {
+        if (fired)
+        {
+            StartCoroutine(Delay5sec());
+        }
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log("aïe");
@@ -21,10 +32,9 @@ public class AmmoBehaviour : MonoBehaviour
     }
     IEnumerator Delay5sec()
     {
-        Debug.Log(Time.time);
         yield return new WaitForSeconds(3f);
-        Debug.Log(Time.time);
         ResetBullet();
+        fired = false;
     }
     private void ResetBullet()
     {

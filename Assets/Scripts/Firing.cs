@@ -11,8 +11,10 @@ public class Firing : MonoBehaviour
     [SerializeField]
     private float speed;
 
-    [SerializeField]
+
     private List<GameObject> ammoReserve;
+    [SerializeField]
+    private int ammoNumber;
 
     public Transform mdirectionUp;
     public Transform mdirectionDown;
@@ -22,6 +24,7 @@ public class Firing : MonoBehaviour
     private bool trigger = false;
     public GameObject PrefabAmmo { get => prefabAmmo; set => prefabAmmo = value; }
     public float Speed { get => speed; set => speed = value; }
+    public int AmmoNumber { get => ammoNumber; set => ammoNumber = value; }
     #endregion
 
     // Start is called before the first frame update
@@ -29,7 +32,7 @@ public class Firing : MonoBehaviour
     {
 
         ammoReserve = new List<GameObject>();
-        for (int i = 0; i < 6; i++)
+        for (int i = 0; i < ammoNumber; i++)
         {
             ammoReserve.Add(Instantiate(prefabAmmo, transform.position, Quaternion.identity));
         }
@@ -63,16 +66,20 @@ public class Firing : MonoBehaviour
     private void ApplyDownOrUpForce(bool isDown, GameObject ammo)
     {
         if (ammo != null)
-        ammo.transform.position = gameObject.transform.position;
-        ammo.SetActive(true);
-        Debug.Log("Ammo => ", ammo);
+        {
+            ammo.transform.position = gameObject.transform.position;
+            ammo.SetActive(true);
 
-        if (isDown)
-            ammo.transform.rotation = mdirectionDown.rotation;
-        else
-            ammo.transform.rotation = mdirectionUp.rotation;
+            Debug.Log("Ammo => ", ammo);
+            if (isDown)
+                ammo.transform.rotation = mdirectionDown.rotation;
+            else
+                ammo.transform.rotation = mdirectionUp.rotation;
+            ammo.GetComponent<Rigidbody2D>().AddForce(isDown ? Vector2.down * speed : Vector2.up * speed, ForceMode2D.Impulse);
+            ammo.GetComponent<AmmoBehaviour>().Fired = true;
+        }
 
-        ammo.GetComponent<Rigidbody2D>().AddForce( isDown ? Vector2.down*speed : Vector2.up * speed, ForceMode2D.Impulse);
+      
     }
 
     private GameObject GiveMeTheNextAvailableAmmo()
