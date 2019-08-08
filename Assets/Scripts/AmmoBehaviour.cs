@@ -23,7 +23,7 @@ public class AmmoBehaviour : MonoBehaviour
     IEnumerator Delay5sec()
     {
         Debug.Log(Time.time);
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         Debug.Log(Time.time);
         Reset();
     }
@@ -32,6 +32,5 @@ public class AmmoBehaviour : MonoBehaviour
         gameObject.SetActive(false);
         gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         gameObject.transform.position = Vector3.zero;
-        gameObject.transform.rotation = Quaternion.identity;
     }
 }

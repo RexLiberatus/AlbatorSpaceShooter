@@ -14,6 +14,9 @@ public class Firing : MonoBehaviour
     [SerializeField]
     private List<GameObject> ammoReserve;
 
+    public Transform mdirectionUp;
+    public Transform mdirectionDown;
+
     #endregion
     #region accessors
     private bool trigger = false;
@@ -63,9 +66,13 @@ public class Firing : MonoBehaviour
         ammo.transform.position = gameObject.transform.position;
         ammo.SetActive(true);
         Debug.Log("Ammo => ", ammo);
+
         if (isDown)
-            ammo.transform.rotation = new Quaternion(0, 0, 180f, 0);
-        ammo.GetComponent<Rigidbody2D>().AddForce( isDown ? Vector2.down: Vector2.up * speed, ForceMode2D.Impulse);
+            ammo.transform.rotation = mdirectionDown.rotation;
+        else
+            ammo.transform.rotation = mdirectionUp.rotation;
+
+        ammo.GetComponent<Rigidbody2D>().AddForce( isDown ? Vector2.down*speed : Vector2.up * speed, ForceMode2D.Impulse);
     }
 
     private GameObject GiveMeTheNextAvailableAmmo()

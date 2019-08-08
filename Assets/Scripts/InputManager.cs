@@ -23,8 +23,8 @@ public class InputManager : MonoBehaviour
             onFire.Invoke();
         }
     }
-    public void Salut()
-    {
-        Debug.Log("salut!");
-    }
+    //public void Salut()
+    //{
+    //    Debug.Log("salut!");
+    //}
 }

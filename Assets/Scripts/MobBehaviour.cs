@@ -7,15 +7,17 @@ public class MobBehaviour : MonoBehaviour
     [SerializeField]
     private float speed;
 
+    Rigidbody2D rb;
     public float Speed { get => speed; set => speed = value; }
 
     private void Start()
     {
+        rb = GetComponent<Rigidbody2D>();
         Move();
     }
     public void Move()
     {
-        var rb = GetComponent<Rigidbody2D>();
+       
         var camPosition = Camera.main.transform.position;
         if( camPosition.y >= transform.position.y)
         {
@@ -25,5 +27,12 @@ public class MobBehaviour : MonoBehaviour
         {
             rb.AddRelativeForce(Vector2.down * speed, ForceMode2D.Impulse);
         }
+    }
+    private void Update()
+    {
+        if (Camera.main.WorldToViewportPoint(transform.position).y >=2) 
+        rb.velocity = -rb.velocity;
+        if (Camera.main.WorldToViewportPoint(transform.position).y <= -1)
+            rb.velocity = -rb.velocity;
     }
 }
