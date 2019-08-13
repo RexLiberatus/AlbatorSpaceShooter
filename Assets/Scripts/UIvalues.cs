@@ -12,7 +12,7 @@ public class UIvalues :MonoBehaviour
     static int lives=4;
   
     static int score=0;
-  
+    static int highScore = 0;
     static int killPoints=25;
     #endregion
 
