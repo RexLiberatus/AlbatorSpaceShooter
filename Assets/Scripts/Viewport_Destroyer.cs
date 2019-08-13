@@ -20,7 +20,7 @@ public class Viewport_Destroyer : MonoBehaviour
   
         m_target = transform;
         m_viewport = Camera.main.WorldToViewportPoint(m_target.position);
-        if (m_viewport.x<=-1)
+        if (m_viewport.x<=-2)
         {
             Destroy(gameObject);
         }

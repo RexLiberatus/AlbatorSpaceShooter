@@ -25,7 +25,13 @@ public class MobSpawner : MonoBehaviour
         if (Time.time > timerSummoning)
         {
             timerSummoning += timerDelay;
-            SummonMob();
+            int i = UIvalues.Score / 100;
+            if(i<1)
+            { i = 1; }
+            for (int j = 0; j < i; j++)
+            {
+                SummonMob();
+            }
         }
     }
 
@@ -41,9 +47,10 @@ public class MobSpawner : MonoBehaviour
         }
 
         Vector2 position = Camera.main.ViewportToWorldPoint(new Vector3(UnityEngine.Random.Range(0f, 2f), Yvalue, 0));
-
-            spawn = Instantiate(prefabMob,position, Quaternion.identity);
-            
+        if(position.y>Camera.main.transform.position.y)
+            spawn = Instantiate(prefabMob, position, new Quaternion(0, 0, 180f, 0));
+        else
+             spawn = Instantiate(prefabMob,position, Quaternion.identity);
        
     }
     #endregion

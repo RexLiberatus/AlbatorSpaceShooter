@@ -14,6 +14,7 @@ public class MobBehaviour : MonoBehaviour
     {
         rb = GetComponent<Rigidbody2D>();
         Move();
+
     }
     public void Move()
     {
@@ -41,5 +42,10 @@ public class MobBehaviour : MonoBehaviour
             transform.rotation = new Quaternion(0, 0, transform.rotation.z + 180f, 0);
             rb.velocity = -rb.velocity;
         }
+    }
+    IEnumerator Lifespan()
+    {
+        yield return new WaitForSeconds(30f);
+        Destroy(gameObject);
     }
 }
