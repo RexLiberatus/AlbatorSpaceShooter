@@ -187,28 +187,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 614048135, guid: 5e34370825d6fe74d85828dcf10e00d7, type: 3}
+      propertyPath: playerScore
+      value: 
+      objectReference: {fileID: 9169622682493501405}
+    - target: {fileID: 614048135, guid: 5e34370825d6fe74d85828dcf10e00d7, type: 3}
+      propertyPath: highScore
+      value: 
+      objectReference: {fileID: 9169622682493501404}
+    - target: {fileID: 5231097966097129190, guid: 5e34370825d6fe74d85828dcf10e00d7,
+        type: 3}
+      propertyPath: timerRestart
+      value: 11
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5e34370825d6fe74d85828dcf10e00d7, type: 3}
---- !u!1 &614048134 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5032366377443271080, guid: 5e34370825d6fe74d85828dcf10e00d7,
-    type: 3}
-  m_PrefabInstance: {fileID: 614048133}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &614048135
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 614048134}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b52194364cb34547a3862213ee00a8b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  playerScore: {fileID: 9169622682493501405}
-  highScore: {fileID: 9169622682493501404}
 --- !u!1 &1062420858
 GameObject:
   m_ObjectHideFlags: 0
@@ -485,6 +478,12 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9169622682878720663, guid: a648816d4f1819e438f20817c2d0f543,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     - target: {fileID: 9169622682189742642, guid: a648816d4f1819e438f20817c2d0f543,
         type: 3}
       propertyPath: m_Material
@@ -495,6 +494,12 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9169622682189742642, guid: a648816d4f1819e438f20817c2d0f543,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     - target: {fileID: 9169622682290189270, guid: a648816d4f1819e438f20817c2d0f543,
         type: 3}
       propertyPath: m_Material
@@ -505,6 +510,12 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9169622682290189270, guid: a648816d4f1819e438f20817c2d0f543,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     - target: {fileID: 9169622681829678112, guid: a648816d4f1819e438f20817c2d0f543,
         type: 3}
       propertyPath: m_Material
@@ -515,6 +526,12 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9169622681829678112, guid: a648816d4f1819e438f20817c2d0f543,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     - target: {fileID: 9169622682417075724, guid: a648816d4f1819e438f20817c2d0f543,
         type: 3}
       propertyPath: m_text
@@ -602,6 +619,12 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 9169622682347993834, guid: a648816d4f1819e438f20817c2d0f543,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a648816d4f1819e438f20817c2d0f543, type: 3}
 --- !u!114 &9169622682493501404 stripped

@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 2857904088490624433}
   - component: {fileID: 8815102069234265542}
+  - component: {fileID: 614048135}
+  - component: {fileID: 5231097966097129190}
   m_Layer: 0
   m_Name: HighscoreManager
   m_TagString: Untagged
@@ -44,3 +46,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Scores: {fileID: 11400000, guid: 2abfc6a18324faf499f35cfcb024c905, type: 2}
+--- !u!114 &614048135
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5032366377443271080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b52194364cb34547a3862213ee00a8b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerScore: {fileID: 0}
+  highScore: {fileID: 0}
+--- !u!114 &5231097966097129190
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5032366377443271080}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a99bedfd1831eef49988e805e991f5bd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
