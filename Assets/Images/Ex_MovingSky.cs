@@ -23,7 +23,7 @@ public class Ex_MovingSky : MonoBehaviour
 
             m_skyMaterial.SetTextureOffset("_MainTex", offset);
         }
-        if (Input.GetKey(KeyCode.Z))
+        if (Input.GetAxis("Vertical") > 0)
         {
             stopDefault = true;
             Vector2 offset = m_skyMaterial.GetTextureOffset("_MainTex");
@@ -35,7 +35,7 @@ public class Ex_MovingSky : MonoBehaviour
 
             m_skyMaterial.SetTextureOffset("_MainTex", offset);
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetAxis("Vertical") < 0)
         {
             stopDefault = true;
             Vector2 offset = m_skyMaterial.GetTextureOffset("_MainTex");
@@ -47,7 +47,7 @@ public class Ex_MovingSky : MonoBehaviour
 
             m_skyMaterial.SetTextureOffset("_MainTex", offset);
         }
-        if (Input.GetKey(KeyCode.D))
+        if (Input.GetAxis("Horizontal") > 0)
         {
             stopDefault = true;
             Vector2 offset = m_skyMaterial.GetTextureOffset("_MainTex");
@@ -59,7 +59,7 @@ public class Ex_MovingSky : MonoBehaviour
 
             m_skyMaterial.SetTextureOffset("_MainTex", offset);
         }
-        if (Input.GetKey(KeyCode.Q))
+        if (Input.GetAxis("Horizontal") < 0)
         {
             stopDefault = true;
             Vector2 offset = m_skyMaterial.GetTextureOffset("_MainTex");

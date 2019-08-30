@@ -17,21 +17,21 @@ public class PlayerMoves : MonoBehaviour
     }
     void FixedUpdate()
     {
-        
-        if(Input.GetKeyDown(KeyCode.Z))
+
+        if (Input.GetAxis("Vertical") > 0)
         {
             MoveVert(Vector3.up);
         }
-        if (Input.GetKeyDown(KeyCode.S))
+        if (Input.GetAxis("Vertical") < 0)
         {
             MoveVert(Vector3.down);
         }
-        if (Input.GetKeyDown(KeyCode.D))
+        if (Input.GetAxis("Horizontal") > 0)
         {
             MoveHor(Vector3.right);
         }
-       if (Input.GetKeyDown(KeyCode.Q))
-       {
+        if (Input.GetAxis("Horizontal") < 0)
+        {
         MoveHor(Vector3.left);
         }
         if(Input.GetKeyUp(KeyCode.Z) ||Input.GetKeyUp(KeyCode.S))
