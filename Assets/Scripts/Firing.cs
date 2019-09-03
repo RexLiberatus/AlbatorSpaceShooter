@@ -47,11 +47,11 @@ public class Firing : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.Z))
+        if (Input.GetAxis("Vertical") > 0)
         {
             trigger = false;
         }
-        else if (Input.GetKeyDown(KeyCode.S))
+        else if (Input.GetAxis("Vertical") < 0)
         {
             trigger = true;
         }

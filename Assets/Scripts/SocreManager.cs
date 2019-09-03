@@ -9,15 +9,17 @@ public class SocreManager : MonoBehaviour
     public TMPro.TextMeshProUGUI playerScore;
     public TMPro.TextMeshProUGUI highScore;
 
-    void Awake()
-    {
-        playerScore.text = UIvalues.Score.ToString();
-
-    }
     private void Start()
     {
+        if (UIvalues.Score.ToString() != null)
+            playerScore.text = UIvalues.Score.ToString();
+        else
+            playerScore.text = "0";
+
         RecordScore();
         CheckHighScores();
+        if(GetComponent<BackToStart>()!=null)
+        GetComponent<BackToStart>().enabled = true;
     }
     //write score in file
     public static void RecordScore()

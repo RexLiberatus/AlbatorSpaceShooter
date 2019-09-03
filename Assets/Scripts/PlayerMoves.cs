@@ -34,11 +34,11 @@ public class PlayerMoves : MonoBehaviour
         {
         MoveHor(Vector3.left);
         }
-        if(Input.GetKeyUp(KeyCode.Z) ||Input.GetKeyUp(KeyCode.S))
+        if (Input.GetAxis("Vertical") == 0)
             { rb.velocity = Vector2.zero; }
 
-        if (Input.GetKeyUp(KeyCode.Q) || Input.GetKeyUp(KeyCode.D))
-            { rb.velocity = Vector2.zero; }
+        if (Input.GetAxis("Horizontal") == 0)
+        { rb.velocity = Vector2.zero; }
 
 
     }
