@@ -5,19 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class BackToStart : MonoBehaviour
 {
-    private float timerRestart;
-    private void Awake()
-    {
-        timerRestart = 10f;
-        FindObjectOfType<BackToStart>().enabled = true ;
-    }
    
     private void FixedUpdate()
     {
         if (Input.GetButtonDown("Fire1") && SceneManager.GetActiveScene().buildIndex==2)
         {
+            UIvalues.HighScore = UIvalues.Score;
+            UIvalues.Score = 0;
             SceneManager.LoadScene(0);
-            FindObjectOfType<BackToStart>().enabled = false;
         }
     }
 

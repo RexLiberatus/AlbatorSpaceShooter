@@ -1030,6 +1030,12 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4975305348982919285, guid: 9e878b09d21f79e4581d4519c05ee961,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     - target: {fileID: 4975305348413192340, guid: 9e878b09d21f79e4581d4519c05ee961,
         type: 3}
       propertyPath: m_Material
@@ -1050,6 +1056,12 @@ PrefabInstance:
       propertyPath: m_sharedMaterial
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 4975305348641575174, guid: 9e878b09d21f79e4581d4519c05ee961,
+        type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee,
+        type: 2}
     - target: {fileID: 1808061882737184958, guid: 9e878b09d21f79e4581d4519c05ee961,
         type: 3}
       propertyPath: health
@@ -1319,7 +1331,8 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 5231097966097129190, guid: 5e34370825d6fe74d85828dcf10e00d7, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 5e34370825d6fe74d85828dcf10e00d7, type: 3}
 --- !u!1001 &4817171680805433255
 PrefabInstance:

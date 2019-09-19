@@ -20,9 +20,8 @@ public class UIvalues :MonoBehaviour
     public static int Lives { get => lives; set => lives = value; }
     public static int Score { get => score; set => score = value; }
     public static int KillPoints { get => killPoints; set => killPoints = value; }
+    public static int HighScore { get => highScore; set => highScore = value; }
     #endregion
 
-    #region Methods
-    
-    #endregion
+
 }

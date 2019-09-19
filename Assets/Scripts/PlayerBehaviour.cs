@@ -25,13 +25,12 @@ public class PlayerBehaviour : MonoBehaviour
     }
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.tag == "Mob")
+        if (collision.gameObject.tag == "Mob" && !godmode)
         {
             UIvalues.Lives -= 1;
             godmode = true;
             Destroy(collision.gameObject);
             StartCoroutine(UnableGodMode(godModeDelay));
-
         }
     }
 

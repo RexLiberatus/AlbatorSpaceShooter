@@ -17,6 +17,8 @@ public class AmmoBehaviour : MonoBehaviour
         if (fired)
         {
             StartCoroutine(Delay5sec());
+            ResetBullet();
+            fired = false;
         }
     }
 
@@ -33,8 +35,6 @@ public class AmmoBehaviour : MonoBehaviour
     IEnumerator Delay5sec()
     {
         yield return new WaitForSeconds(3f);
-        ResetBullet();
-        fired = false;
     }
     private void ResetBullet()
     {
